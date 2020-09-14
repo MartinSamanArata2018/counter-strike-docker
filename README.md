@@ -58,3 +58,37 @@ This project is based on [counter-strike-docker](https://github.com/artem-panche
 * Changed the name of the build.
 * Added new maps.
 * Added new parameters in run script.
+
+# Terraform
+Install
+```bash
+choco install terraform
+```
+## Azure
+
+Install Azure CLI
+```bash
+Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; rm .\AzureCLI.msi
+```
+
+Login
+```bash
+az login
+```
+
+Change default subscription (if necessary)
+```bash
+az account list
+az account set --subscription subscription-id
+```
+
+
+```bash
+terraform init
+```
+```bash
+terraform apply
+```
+```bash
+terraform destroy
+```
